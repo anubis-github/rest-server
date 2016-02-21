@@ -10,5 +10,5 @@ services:
 
 after_success:
   - docker login -e="yuri.a.melnikov@gmail.com" -u="anubisdocker" -p="K1_argador"
-  - docker build -t anubisdocker/rest-server:latest .
+  - docker build -t=anubisdocker/rest-server:latest .
 
