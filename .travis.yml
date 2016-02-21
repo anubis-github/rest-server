@@ -3,11 +3,12 @@ language: java
 jdk:
   - oraclejdk8
 
-#use docker
+# turn on docker service
 sudo: required
 services:
   - docker
 
+# customize build phases for docker
 after_success:
   - docker login -e="yuri.a.melnikov@gmail.com" -u="anubisdocker" -p="K1_argador"
   - docker build -t=anubisdocker/rest-server:latest .
